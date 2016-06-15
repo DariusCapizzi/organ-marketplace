@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('organ', {path: '/organ/:organ_id'});
+  this.route('checkout');
 });
 
 export default Router;
