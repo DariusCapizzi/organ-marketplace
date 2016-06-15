@@ -2,20 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-
-
-    firstName : 'Betty',
-    lastName :Ember.computed('firstName', 'lastName', function() {
-      return `${this.get('firstName')} ${this.get('fullName')}`;
-    }),
-
-
-  fullName: Ember.computed('firstName', 'lastName', function() {
-    return `${this.get('firstName')} ${this.get('lastName')}`;
-  }),
-
-
-
   isShowForm: false,
 
   _toggleForm: function(){
@@ -25,10 +11,12 @@ export default Ember.Component.extend({
    var params = {
       organName: this.get('organ-name'),
       cost: this.get('cost'),
+      description: this.get('description'),
     };
     this._toggleForm();
     this.set('organ-name', '');
     this.set('cost', '');
+    this.set('description', '')
     this.sendAction('sendOrgan', params);
   },
   actions: {

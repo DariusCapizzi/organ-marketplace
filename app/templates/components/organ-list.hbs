@@ -1,8 +1,8 @@
-{{log fullName}}
-{{#each model as |organ|}}
-  {{organ-tile organ=organ}}
-{{/each}}
-
+<div class="row">
+  {{#each model as |organ|}}
+    {{organ-tile organ=organ}}
+  {{/each}}
+</div>
 
 {{#if isShowForm}}
     <form class="newOrgan">
@@ -12,7 +12,9 @@
       <br>
       <label for="cost">how much you want for it: </label>
       {{input value=cost}}
-
+      <br>
+      <label for="description">description: </label>
+      {{input value=description}}
 
       <button type="button" {{action 'submitOrgan'}}>Submit</button>
     </form>
