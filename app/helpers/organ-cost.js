@@ -1,12 +1,15 @@
 import Ember from 'ember';
 
 export function organCost(params) {
+  console.log(params)
   var organPrice = params[0].get('cost');
 
   if (organPrice >= 550) {
-    return "over";
+    return "Expensive";
   } else if (organPrice < 550){
-    return "under";
+    return "Inexpensive";
+  } else {
+    return "whatver"
   }
 }
 

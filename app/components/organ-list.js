@@ -12,11 +12,13 @@ export default Ember.Component.extend({
       organName: this.get('organ-name'),
       cost: parseInt(this.get('cost')),
       description: this.get('description'),
+      imgURL: this.get('imgURL'),
     };
     this._toggleForm();
     this.set('organ-name', '');
     this.set('cost', '');
-    this.set('description', '')
+    this.set('description', '');
+    this.set('imgURL', '');
     this.sendAction('sendOrgan', params);
   },
   actions: {

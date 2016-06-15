@@ -4,4 +4,5 @@ export default DS.Model.extend({
   organName: DS.attr('string'),
   cost: DS.attr(),
   description: DS.attr(),
+  imgURL: DS.attr(),
 });
