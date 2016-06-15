@@ -5,7 +5,7 @@
 </div>
 
 {{#if isShowForm}}
-    <form class="newOrgan form-group">
+    <form class="newOrgan form-group" {{action 'submitOrgan' on="submit"}}>
 
       <label for="content" class="">organ name: </label>
       {{input value=organ-name class="form-control"}}
@@ -18,8 +18,8 @@
 
       <label for="imgURL" class="">imgURL: </label>
       {{input value=imgURL class="form-control"}}
-
-      <button type="button" {{action 'submitOrgan'}}>Submit</button>
+      <br>
+      <button class="btn btn-primary btn-block" type="submit">Submit</button>
     </form>
 
 {{else}}
