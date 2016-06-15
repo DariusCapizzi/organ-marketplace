@@ -8,6 +8,12 @@ export default Ember.Component.extend({
     },
     remove(){
       this.get("shoppingCart").remove(this.get("organ"))
+    },
+    deleteOrgan(){
+      console.log("hey")
+      // this.get("shoppingCart").remove(this.get("organ"));
+      this.organ.destroyRecord();
+      this.sendAction('goHome');
     }
   }
 });

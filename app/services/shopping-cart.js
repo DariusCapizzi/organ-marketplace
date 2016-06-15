@@ -15,8 +15,8 @@ export default Ember.Service.extend({
   getTotal(){
     var total = 0;
     this.get('organs').forEach(function(organ){
-      console.log(parseInt(organ._internalModel._data.cost));
-      total += parseInt(organ._internalModel._data.cost);
+      // console.log(parseInt(organ._internalModel._data.cost));
+      total += parseInt(organ.get('cost'));
     });
     return total;
   }

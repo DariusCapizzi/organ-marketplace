@@ -10,7 +10,7 @@ export default Ember.Component.extend({
   _submitOrgan(){
    var params = {
       organName: this.get('organ-name'),
-      cost: this.get('cost'),
+      cost: parseInt(this.get('cost')),
       description: this.get('description'),
     };
     this._toggleForm();
