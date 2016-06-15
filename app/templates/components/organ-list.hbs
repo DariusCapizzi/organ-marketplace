@@ -1,0 +1,22 @@
+{{log fullName}}
+{{#each model as |organ|}}
+  {{organ-tile organ=organ}}
+{{/each}}
+
+
+{{#if isShowForm}}
+    <form class="newOrgan">
+
+      <label for="content">organ name: </label><br>
+      {{input value=organ-name}}
+      <br>
+      <label for="cost">how much you want for it: </label>
+      {{input value=cost}}
+
+
+      <button type="button" {{action 'submitOrgan'}}>Submit</button>
+    </form>
+
+{{else}}
+  <button type="button" {{action 'showForm'}}>new ORGAN</button>
+{{/if}}
